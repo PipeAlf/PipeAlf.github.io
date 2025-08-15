@@ -134,17 +134,19 @@ nav a {
 
 .section {
   padding: 4rem 2rem;
-  max-width: 900px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 .project-list {
   display: grid;
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* antes no tenías esta línea */
 }
 
 .project {
-  background: rgba(0, 0, 0, 0.6); /* Negro semitransparente */
+  background: black; /* Negro semitransparente */
+  /* background: rgba(0, 0, 0, 0.6); Negro semitransparente */
   color: var(--glow);
   border-radius: 12px;
   padding: 40px;
@@ -170,6 +172,7 @@ nav a {
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
 }
 
 .project .btn {
@@ -191,12 +194,16 @@ nav a {
     max-width: 180px;
   }
 }
-/* section a{
-  display: inline-block;
-  margin-top: 1rem;
-  background: #00ff00;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
+
+footer {
+  color: var(--glow);
+}
+
+footer a {
+  color: var(--glow);
   text-decoration: none;
-} */
+}
+
+footer a:hover {
+  color: #b6ffb6;
+}
